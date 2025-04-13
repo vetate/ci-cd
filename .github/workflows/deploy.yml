@@ -1,0 +1,27 @@
+name: CI/CD Pipeline - Azure + Databricks
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+        package: .
+
+    - name: Trigger Databricks Job
+      run: |
+        curl -X POST ${{ secrets.DATABRICKS_HOST }}/api/2.1/jobs/run-now \
+          -H "Authorization: Bearer ${{ secrets.DATABRICKS_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          -d "{\"job_id\": ${{ secrets.DATABRICKS_JOB_ID }}}"
