@@ -21,7 +21,7 @@ jobs:
 
     - name: Trigger Databricks Job
       run: |
-        curl -X POST ${{ secrets.DATABRICKS_HOST }}/api/2.1/jobs/run-now \
+        curl -X POST ${{ secrets.DATABRICKS_HOST }}/api/2.1/jobs/run-now  \
           -H "Authorization: Bearer ${{ secrets.DATABRICKS_TOKEN }}" \
           -H "Content-Type: application/json" \
           -d "{\"job_id\": ${{ secrets.DATABRICKS_JOB_ID }}}"
