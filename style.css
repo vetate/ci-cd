@@ -1,0 +1,36 @@
+
+/* the background body colour */
+body {
+  background-color: #353739;
+}
+
+/* <h1> tag Title style*/
+h1 {
+    font-family: Montserrat;
+  font-size: 28px;
+  color: #faf8f0;
+  text-align: center;
+}
+
+/* <p> tag style*/
+p {
+  font-family: Montserrat;
+  font-weight: normal;
+  color: #e4ded2;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* active Link */
+a:link {
+  color: #c1e4f0;
+}
+/* visited link */
+a:visited {
+  color: #c1e4f0;
+}
+/* mouse over link */
+a:hover {
+  color: #e4ded2;
+}
+
