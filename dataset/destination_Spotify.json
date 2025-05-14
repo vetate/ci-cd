@@ -1,0 +1,53 @@
+{
+	"name": "destination_Spotify",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Spotify_In_Destination2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "song",
+				"type": "varchar"
+			},
+			{
+				"name": "song_popularity",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "artist",
+				"type": "varchar"
+			},
+			{
+				"name": "album",
+				"type": "varchar"
+			},
+			{
+				"name": "album_cover",
+				"type": "varchar"
+			},
+			{
+				"name": "artist_popularity",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "genre",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Spotify"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

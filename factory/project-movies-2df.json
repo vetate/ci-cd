@@ -1,0 +1,9 @@
+{
+	"name": "project-movies-2df",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "938fc13c-d329-4eee-a003-821c645b147a",
+		"tenantId": "54efe58d-72b7-45af-9a01-30ee5f377a71"
+	}
+}

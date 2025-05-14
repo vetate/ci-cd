@@ -1,0 +1,58 @@
+{
+	"name": "db_BlobSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SportifyBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "datasetSpotify.csv",
+				"folderPath": "raw-data",
+				"container": "spotify"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "song",
+				"type": "String"
+			},
+			{
+				"name": "song_popularity",
+				"type": "String"
+			},
+			{
+				"name": "artist",
+				"type": "String"
+			},
+			{
+				"name": "album",
+				"type": "String"
+			},
+			{
+				"name": "album_cover",
+				"type": "String"
+			},
+			{
+				"name": "artist_popularity",
+				"type": "String"
+			},
+			{
+				"name": "genre",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
